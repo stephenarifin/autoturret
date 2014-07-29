@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/black"
+    tools:context=".Remote" >
+    
+
+    <com.arifin.missilelauncherclient.MjpegView
+        android:id="@+id/webcam"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentRight="true"
+        android:padding="0dp" />
+    
+    <ImageView
+        android:id="@+id/bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/webcam"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/bar"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+	    android:adjustViewBounds="true"
+	    android:background="@null" />
+
+    <RelativeLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/bar"
+        android:background="@drawable/button_background" >
+
+        <ImageButton
+	        android:id="@+id/fireImageButton"
+	        android:layout_width="@dimen/fire_button_width"
+	        android:layout_height="@dimen/fire_button_height"
+	        android:layout_centerVertical="true"
+	        android:layout_centerHorizontal="true"
+	        android:src="@drawable/fire_keypad"
+	        android:scaleType="fitCenter"
+	        android:adjustViewBounds="true"
+	        android:background="@null" />
+        
+        <ImageButton
+	        android:id="@+id/upImageButton"
+	        android:layout_width="@dimen/movement_button_width"
+	        android:layout_height="@dimen/movement_button_height"
+	        android:layout_above="@+id/fireImageButton"
+	        android:layout_centerHorizontal="true"
+	        android:src="@drawable/up_keypad"
+	        android:scaleType="fitCenter"
+	        android:adjustViewBounds="true"
+	        android:background="@null" />
+	
+	    <ImageButton
+	        android:id="@+id/rightImageButton"
+	        android:layout_width="@dimen/movement_button_width"
+	        android:layout_height="@dimen/movement_button_height"
+	        android:layout_alignTop="@+id/fireImageButton"
+	        android:layout_toRightOf="@+id/upImageButton"
+	        android:src="@drawable/right_keypad"
+	        android:scaleType="fitCenter"
+	        android:adjustViewBounds="true"
+	        android:background="@null" />
+	
+	    <ImageButton
+	        android:id="@+id/leftImageButton"
+	        android:layout_width="@dimen/movement_button_width"
+	        android:layout_height="@dimen/movement_button_height"
+	        android:layout_alignTop="@id/fireImageButton"
+	        android:layout_toLeftOf="@id/upImageButton"
+	        android:adjustViewBounds="true"
+	        android:scaleType="fitCenter"
+	        android:src="@drawable/left_keypad"
+	        android:background="@null" />
+	
+	    <ImageButton
+	        android:id="@+id/downImageButton"
+	        android:layout_width="@dimen/movement_button_width"
+	        android:layout_height="@dimen/movement_button_height"
+	        android:layout_alignLeft="@+id/fireImageButton"
+	        android:layout_below="@+id/rightImageButton"
+	        android:adjustViewBounds="true"
+	        android:background="@null"
+	        android:scaleType="fitCenter"
+	        android:src="@drawable/down_keypad" />
+        
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
